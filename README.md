@@ -4,9 +4,10 @@ Segmentation of 2,781 e-commerce customers by order value and email engagement,
 to help marketing address each customer group differently.
 
 **Tools:** SQL (Google BigQuery) · Python (pandas, scikit-learn, matplotlib) · Tableau
-
+ 
 **Interactive dashboard:** [Tableau Public](https://public.tableau.com/views/CustomerSegmentationEmailEngagement/CustomerSegmentation)
-
+ [![Dashboard](dashboard.png)](https://public.tableau.com/views/CustomerSegmentationEmailEngagement/CustomerSegmentation?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+ 
 ## Approach
 
 1. **SQL (BigQuery):** built one feature table per customer from 9 tables of the course dataset.
