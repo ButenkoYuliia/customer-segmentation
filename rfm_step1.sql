@@ -1,8 +1,6 @@
 -- =====================================================
 -- RFM-сегментация клиентов — Шаг 1: таблица RFM
--- Датасет: DA (BigQuery)
--- Замени `DA.` на полный путь своего проекта,
--- например `data-analytics-mate.DA.`
+-- Датасет: data-analytics-mate.DA
 -- =====================================================
 
 -- Запрос 1. RFM-показатели для каждого клиента
@@ -12,18 +10,18 @@ WITH orders AS (
     s.date,                  -- когда купил
     o.ga_session_id,         -- в какой сессии (= один заказ)
     p.price                  -- сколько стоил товар
-  FROM `DA.order` AS o
-  JOIN `DA.product` AS p
+  FROM `data-analytics-mate.DA.order` AS o
+  JOIN `data-analytics-mate.DA.product` AS p
     ON o.item_id = p.item_id
-  JOIN `DA.session` AS s
+  JOIN `data-analytics-mate.DA.session` AS s
     ON o.ga_session_id = s.ga_session_id
-  JOIN `DA.account_session` AS acs     -- только зарегистрированные клиенты
+  JOIN `data-analytics-mate.DA.account_session` AS acs     -- только зарегистрированные клиенты
     ON o.ga_session_id = acs.ga_session_id
 )
 SELECT
   account_id,
   -- R: сколько дней прошло с последней покупки до конца периода
-  DATE_DIFF((SELECT MAX(date) FROM `DA.session`), MAX(date), DAY) AS recency_days,
+  DATE_DIFF((SELECT MAX(date) FROM `data-analytics-mate.DA.session`), MAX(date), DAY) AS recency_days,
   -- F: сколько раз покупал (число сессий с заказом)
   COUNT(DISTINCT ga_session_id) AS frequency,
   -- M: сколько всего потратил
@@ -39,8 +37,8 @@ WITH rfm AS (
   SELECT
     acs.account_id,
     COUNT(DISTINCT o.ga_session_id) AS frequency
-  FROM `DA.order` AS o
-  JOIN `DA.account_session` AS acs
+  FROM `data-analytics-mate.DA.order` AS o
+  JOIN `data-analytics-mate.DA.account_session` AS acs
     ON o.ga_session_id = acs.ga_session_id
   GROUP BY acs.account_id
 )

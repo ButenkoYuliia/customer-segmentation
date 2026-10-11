@@ -51,6 +51,9 @@ SELECT
   COALESCE(e.emails_sent, 0)    AS emails_sent,
   COALESCE(e.emails_opened, 0)  AS emails_opened,
   COALESCE(e.emails_visited, 0) AS emails_visited,
+  -- open_rate / visit_rate = NULL у клиентов без писем (доля не определена).
+  -- Намеренно не 0: иначе в Tableau средние open/visit rate занижаются
+  -- за счёт сегмента "No Email".
   ROUND(SAFE_DIVIDE(e.emails_opened,  e.emails_sent), 3) AS open_rate,
   ROUND(SAFE_DIVIDE(e.emails_visited, e.emails_sent), 3) AS visit_rate,
 

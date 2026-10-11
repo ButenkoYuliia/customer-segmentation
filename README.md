@@ -34,18 +34,19 @@ to help marketing address each customer group differently.
 ## Key findings
 
 - **63% of buyers are not reached by email marketing.**
-- A hypothesis was **rejected by the data**: customers who ignore emails unsubscribe *least* —
+- The hypothesis "customers who ignore emails unsubscribe most often" was **rejected by the data**:
+  customers who ignore emails unsubscribe *least* —
   because those who unsubscribe stop receiving emails (reversed cause and effect).
 - The **most engaged** customers unsubscribe **most often** (37%) — a topic for further research.
 - The segments differ mainly in email behaviour, not in order value.
 
 ## Recommendations
 
-- **No Email (63%)** — collect and verify email addresses at checkout to bring these customers into email marketing.
+- **No Email (63%)** — collect and verify email addresses at checkout; invite buyers to subscribe after the purchase (e.g. discount for subscription).
 - **Unverified** — send a reminder to confirm the email address.
-- **Ignorers** — reduce email frequency to avoid fatigue.
+- **Ignorers** — reduce email frequency, test new subject lines, run a re-engagement campaign.
 - **Readers** — improve calls-to-action in emails (buttons, offers, links) to turn opens into clicks.
-- **Active Clickers** — investigate why the most engaged customers unsubscribe most often (e.g. survey or content analysis).
+- **Active Clickers** — upsell offers; investigate why the most engaged customers unsubscribe most often (survey on unsubscribe reasons).
 
 ## Files
 
