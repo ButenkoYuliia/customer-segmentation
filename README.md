@@ -3,12 +3,13 @@
 Segmentation of 2,781 e-commerce customers by order value and email engagement,
 to help marketing address each customer group differently.
 
-**Tools:** SQL (Google BigQuery) · Python (pandas, scikit-learn, matplotlib) · Tableau
- **Data:** e-commerce dataset in Google BigQuery (9 tables, ~3 months, 2,781 customers)
- 
+**Tools:** SQL (Google BigQuery) · Python (pandas, scikit-learn, matplotlib) · Tableau  
+**Data:** e-commerce dataset in Google BigQuery (9 tables, ~3 months, 2,781 customers)
+
 **Interactive dashboard:** [Tableau Public](https://public.tableau.com/views/CustomerSegmentationEmailEngagement/CustomerSegmentation)
- [![Dashboard](dashboard.png)](https://public.tableau.com/views/CustomerSegmentationEmailEngagement/CustomerSegmentation?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
- 
+
+[![Dashboard](dashboard.png)](https://public.tableau.com/views/CustomerSegmentationEmailEngagement/CustomerSegmentation)
+
 ## Approach
 
 1. **SQL (BigQuery):** built one feature table per customer from 9 tables of the course dataset.
@@ -39,11 +40,13 @@ to help marketing address each customer group differently.
 - The segments differ mainly in email behaviour, not in order value.
 
 ## Recommendations
+
 - **No Email (63%)** — collect and verify email addresses at checkout to bring these customers into email marketing.
 - **Unverified** — send a reminder to confirm the email address.
 - **Ignorers** — reduce email frequency to avoid fatigue.
+- **Readers** — improve calls-to-action in emails (buttons, offers, links) to turn opens into clicks.
 - **Active Clickers** — investigate why the most engaged customers unsubscribe most often (e.g. survey or content analysis).
-  
+
 ## Files
 
 | File | Content |
